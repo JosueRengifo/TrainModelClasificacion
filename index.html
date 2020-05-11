@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Classificar</title>
+
+  <!-- Import TensorFlow.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+   <!-- Import tfjs-vis -->
+   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
+  <!-- Import the main script file -->
+   <script src="data.js"></script>
+   <script src='clasificador.js'></script>
+   <!-- Import the main script file -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <div style="text-align: left;">
+    <h3>Proyecto FrameD-SIS</h3>
+    <h4>Entrenamiento de red neuronal</h4>
+  <h5>Clasificación de perfiles de usuarios</h5>
+</div>
+<div style="width: 300px;">
+  <p><em>Antes de iniciar el entrenamiento asegurese de haber registrado los valores a continuación</em></p>
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Learning Rate</span>
+    </div>
+    <input type="text" class="form-control"  id="learningRate" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value=".01">
+  </div>
+  <div class="input-group input-group-sm mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" >Number Of Epochs</span>
+    </div>
+    <input type="text" class="form-control" id="numberOfEpochs" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" value="50">
+  </div>
+  <p><em>El modelo ya se ha probado con varios datos y para obtener una precisión aproximada al 90% se debe tener un Larning Rate del 0.01 y con 7000 Epocs</em></p>
+  <p><em>Al finalizar el entrenamiento la aplicación descarga dos archivos que son el modelo ya entrenado, se recomienda configurar el navegador para permitir descargar multiples archivos</em></p>
+</div>
+
+  <button onclick="fitModel()"> Iniciar Entrenamiento</button>
+</body>
